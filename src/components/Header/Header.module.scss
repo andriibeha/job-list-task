@@ -1,0 +1,12 @@
+.header {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    font-size: 22px;
+    cursor: pointer;
+    color: #3a4562;
+  }
+}

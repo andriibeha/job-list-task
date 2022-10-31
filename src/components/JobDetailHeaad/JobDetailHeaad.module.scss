@@ -2,6 +2,22 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
+  &__pc {
+    @media screen and (min-width: 1400px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__line__pc {
+    display: none;
+
+    @media screen and (min-width: 1400px) {
+      display: block;
+    }
+  }
+
   &__header {
     font-weight: 700;
     font-size: 28px;
@@ -19,11 +35,20 @@
       cursor: pointer;
       margin-right: 36px;
       display: flex;
+      align-items: center;
+
       &__icon {
         width: 20px;
         height: 20px;
 
         margin-right: 12px;
+
+        @media screen and (min-width: 1400px) {
+          width: 32px;
+          height: 32px;
+
+          margin-right: 8px;
+        }
       }
 
       &__text {
@@ -34,17 +59,31 @@
         letter-spacing: -0.5px;
 
         color: rgba(56, 65, 93, 0.82);
+
+        @media screen and (min-width: 1400px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
       }
     }
     //SHAPE
     &__shape {
       cursor: pointer;
       display: flex;
+      align-items: center;
+
       &__icon {
         width: 20px;
         height: 20px;
 
         margin-right: 10px;
+
+        @media screen and (min-width: 1400px) {
+          width: 32px;
+          height: 32px;
+
+          margin-right: 8px;
+        }
       }
 
       &__text {
@@ -55,20 +94,42 @@
         letter-spacing: -0.5px;
 
         color: rgba(56, 65, 93, 0.82);
+
+        @media screen and (min-width: 1400px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
       }
     }
   }
-  //TITLE
-  &__title {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
+  //BUTTON
+  &__button {
+    display: none;
 
-    letter-spacing: -0.75px;
+    @media screen and (min-width: 1400px) {
+      display: block;
 
-    color: #3a4562;
+      margin-top: 39px;
+      margin-bottom: 32px;
 
-    margin-bottom: 5px;
+      background: #384564;
+      border: 1px solid #384564;
+      border-radius: 8px;
+
+      cursor: pointer;
+
+      padding: 18px 30px;
+
+      text-align: center;
+
+      color: #fff;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 16px;
+
+      text-align: center;
+      text-transform: uppercase;
+    }
   }
   //INFO
   &__info {
@@ -78,6 +139,13 @@
     align-items: center;
 
     margin-bottom: 14px;
+
+    @media screen and (min-width: 1400px) {
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      width: 200px;
+      float: right;
+    }
 
     &__time {
       font-weight: 300;

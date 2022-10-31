@@ -18,14 +18,11 @@ const JobItem: FC = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (!item) {
-      navigate("/");
-    }
-
+    if (!item) navigate("/");
     return () => {
       dispatch(setJobDetail(null));
     };
-  }, []);
+  }, [dispatch, navigate, item]);
 
   if (!item) return <Loader />;
 
@@ -34,28 +31,14 @@ const JobItem: FC = () => {
     benefits,
     title,
     salary,
-    pictures,
-    employment_type,
-    email,
-    phone,
   } = item;
 
   return (
     <>
       <JobDetailHeaad title={title} salary={salary} />
-
       <JobDetailDescription description={description} />
-
       <JobDetailBenefits benefits={benefits} />
-
-      <JobDetailInfo
-        pictures={pictures}
-        employment_type={employment_type}
-        email={email}
-        phone={phone}
-        benefits
-      />
-
+      <JobDetailInfo job={item} />
       <Link to={"/"}>
         <div className={s.return}>
           <img src={arrow} alt="return" className={s.return__arrow} />

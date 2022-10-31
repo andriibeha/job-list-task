@@ -1,21 +1,28 @@
 .job_detail {
-  &__title {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
-
-    letter-spacing: -0.625px;
-
-    color: #3a4562;
-
-    margin-bottom: 5px;
-  }
   //IMAGE
   &__image {
     width: 209px;
     height: 115px;
 
     margin-bottom: 64px;
+    margin-top: 20px;
+  }
+  //TITLE
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+
+    letter-spacing: -0.75px;
+
+    color: #3a4562;
+
+    margin-bottom: 5px;
+
+    @media screen and (min-width: 1400px) {
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
 
   //SECOND TITLE
@@ -29,6 +36,7 @@
     color: rgba(56, 65, 93, 0.82);
 
     margin-bottom: 10px;
+    margin-top: 15px;
   }
   //EMPLOYMENT TYPE
   &__employment_type {
@@ -50,9 +58,14 @@
 
     color: #55699e;
 
-    margin-bottom: 27px;
+    margin-bottom: 12px;
     margin-right: 9px;
-    margin-top: 15px;
+    margin-top: 10px;
+
+    @media screen and (min-width: 1400px) {
+      width: 220px;
+      height: 50px;
+    }
   }
   //BENEFITS
   &__benefits {
@@ -76,13 +89,14 @@
 
     margin-bottom: 63px;
     margin-right: 9px;
+
+    @media screen and (min-width: 1400px) {
+      width: 220px;
+      height: 50px;
+    }
   }
 
   &__item {
     color: #3a4562;
-  }
-
-  &__flex {
-    display: flex;
   }
 }

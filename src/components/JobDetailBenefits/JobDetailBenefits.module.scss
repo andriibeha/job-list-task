@@ -1,0 +1,45 @@
+.job_detail {
+  //BULLET
+  &__bullet {
+    margin-right: 15px;
+  }
+  //DESCRIPTION ITEM
+  &__description__item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    letter-spacing: -0.5625px;
+
+    color: rgba(56, 65, 93, 0.82);
+  }
+  //BUTTON
+  &__button {
+    margin-top: 15px;
+    margin-bottom: 135px;
+
+    background: #384564;
+    border: 1px solid #384564;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    padding: 18px 30px;
+
+    //CENTER
+    text-align: center;
+
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1400px) {
+      margin-bottom: 86px;
+      margin-top: 39px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { FC, useEffect, useCallback } from "react";
 import { useSelector } from "react-redux";
-import JobList from "../../components/JobItem";
+import JobItem from "../../components/JobItem";
 import { Loader } from "../../components/Loader/indexd";
 import { selectJobsData } from "../../redux/selectors/selectJobsData";
 import {
@@ -10,7 +10,7 @@ import {
 } from "../../redux/slices/JobsSlice";
 import { useAppDispatch } from "../../redux/store";
 
-const Home: FC = () => {
+const Home: FC = (props) => {
   const dispatch = useAppDispatch();
   const { items, status } = useSelector(selectJobsData);
 
@@ -26,6 +26,7 @@ const Home: FC = () => {
   );
 
   if (status === "loading") return <Loader />;
+
   return (
     <main className="main">
       {status === "error" ? (
@@ -36,7 +37,7 @@ const Home: FC = () => {
       ) : (
         <div>
           {items.map((obj: JobsListType) => (
-            <JobList key={obj.id} item={obj} onClick={() => onItemClick(obj)} />
+            <JobItem key={obj.id} item={obj} onClick={() => onItemClick(obj)} />
           ))}
         </div>
       )}

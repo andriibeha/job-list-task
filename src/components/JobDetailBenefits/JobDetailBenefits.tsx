@@ -1,15 +1,16 @@
 import { FC } from "react";
 import bullet from "../../assets/Bullet.svg";
 import s from "./JobDetailBenefits.module.scss";
+import { Props } from "./types";
 
-const JobDetailBenefits: FC<any> = ({ benefits }) => {
+const JobDetailBenefits: FC<Props> = ({ benefits }) => {
   return (
     <>
-      <p className={s.job_detail__title}>Compensation & Benefits:</p>
+      <p className="title mb">Compensation & Benefits:</p>
 
       <ul>
-        {benefits.map((item: any) => (
-          <li key={item} className={s.job_detail__flex}>
+        {benefits.map((item) => (
+          <li key={item} className="flex">
             <img src={bullet} alt="bullet" className={s.job_detail__bullet} />
             <p className={s.job_detail__description__item}>{item}</p>
           </li>
