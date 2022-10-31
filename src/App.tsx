@@ -9,7 +9,7 @@ import "./scss/app.scss";
 const App: FC = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}>
+      <Route path="" element={<MainLayout />}>
         <Route path="" element={<Home />} />
         <Route path="job/:id" element={<JobItem />} />
         <Route path="*" element={<NotFound />} />
