@@ -13,17 +13,20 @@ export type JobsListType = {
   address: string;
   updatedAt: string;
   description: string;
+  benefits: string[];
   employment_type: string[];
   pictures: string[];
 };
 
 interface LaunchSlickState {
   items: JobsListType[];
+  item: JobsListType | null;
   status: JobStatus;
 }
 
 const initialState: LaunchSlickState = {
   items: [],
+  item: null,
   status: "loading",
 };
 
@@ -50,8 +53,11 @@ export const jobsSlice = createSlice({
   name: "jobs",
   initialState,
   reducers: {
-    setLaunch(state, action) {
+    setJobListData(state, action) {
       state.items = action.payload;
+    },
+    setJobDetail(state, action) {
+      state.item = action.payload;
     },
   },
   extraReducers: {
@@ -70,6 +76,6 @@ export const jobsSlice = createSlice({
   },
 });
 
-export const { setLaunch } = jobsSlice.actions;
+export const { setJobListData, setJobDetail } = jobsSlice.actions;
 
 export default jobsSlice.reducer;

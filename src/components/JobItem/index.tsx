@@ -1,64 +1,64 @@
 import { FC } from "react";
-import { Link, useParams } from "react-router-dom";
-import arrow from "../../assets/Arrow.svg";
-import star from "../../assets/Star.svg";
-import shape from "../../assets/Shapeicon.svg";
-import s from "./JobItem.module.scss";
+import { Link } from "react-router-dom";
+import location from "../../assets/Location.svg";
+import star from "../../assets/5starRatingBig.svg";
+import favorite from "../../assets/Bookmark.svg";
+import s from "./job-list.module.scss";
+import { JobsListType } from "../../redux/slices/JobsSlice";
 
 type JobsListProps = {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  title: string;
-  salary: string;
-  address: string;
-  updatedAt: string;
-  description: string;
-  employment_type: string[];
-  pictures: string[];
+  item: JobsListType,
+  onClick: () => void
 };
 
-const JobItem: FC<JobsListProps> = ({ title }) => {
-  const { id } = useParams();
-
+const JobList: FC<JobsListProps> = ({ item, onClick }) => {
+  const {id, name, title, pictures} = item;
   return (
-    <>
-      <div className={s.job_detail}>
-        <div className={s.job_detail__header}>Job Details</div>
-      </div>
+    <section className="section" >
+      <Link to={`/job/${id}`} onClick={onClick}>
+        <div className={s.job_list}>
+          <div className={s.job_list__wraper}>
+            <img src={pictures[0]} alt="img" className={s.job_list__img} />
 
-      <hr />
+            <div className={s.job_list__text__wraper}>
+              <div className={s.job_list__description}>
+                <p className={s.job_list__description__title}>{title}</p>
 
-      <div className="job_detail__flex">
-        <div className={s.job_detail__favorite__star}>
-          <img
-            src={star}
-            alt="satr"
-            className={s.job_detail__favorite__star__icon}
-          />
-          <p className={s.job_detail__favorite__star__text}>Save to my list</p>
-        </div>
-        <div className={s.job_detail__favorite__shape}>
-          <img
-            src={shape}
-            alt="shape"
-            className={s.job_detail__favorite__shape__icon}
-          />
-          <p className={s.job_detail__favorite__shape__text}>Shape</p>
-        </div>
-      </div>
+                <p className={s.job_list__description__name}>
+                  Department name
+                  <span className={s.job_list__description__span}>.</span>{" "}
+                  {name} - AKH
+                </p>
 
-      <div>{title}</div>
+                <div className={s.job_list__description__location}>
+                  <img
+                    src={location}
+                    alt="location icon"
+                    className={s.job_list__description__location__icon}
+                  />
+                  <p className={s.job_list__description__location__address}>
+                    City, Country
+                  </p>
+                </div>
+              </div>
+              <div className={s.job_list__mobile__favorite}>
+                <img src={star} alt="star icon" className={s.job_list__star} />
 
-      <Link to={"/"}>
-        <div className={s.return}>
-          <img src={arrow} alt="return" className={s.return__arrow} />
-          <p className={s.return__description}>RETURN TO JOB BOARD</p>
+                <div className={s.job_list__favorite}>
+                  <img
+                    src={favorite}
+                    alt="favorite icon"
+                    className={s.job_list__favorite__icon}
+                  />
+                  <p className={s.job_list__favorite__time}>Posted ... ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </Link>
-    </>
+    </section>
   );
 };
 
-export default JobItem;
+export default JobList;
