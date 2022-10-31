@@ -1,0 +1,97 @@
+.job_list {
+  &__wraper {
+    display: grid;
+    grid-template-columns: 66px 279px;
+    grid-template-rows: 166px;
+    grid-column-gap: 19px;
+    grid-row-gap: 0px;
+
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    border-radius: 10px;
+
+    background-color: #fff;
+
+    padding: 17px 16px 27px 16px;
+  }
+
+  &__text__wraper {
+    display: grid;
+    grid-template-columns: 279px;
+    grid-template-rows: 135px 17px;
+    grid-column-gap: 0px;
+    grid-row-gap: 17px;
+  }
+
+  &__img {
+    width: 66px;
+    height: 66px;
+
+    border-radius: 35px;
+
+    margin-right: 19px;
+    margin-top: 50%;
+  }
+
+  &__description {
+    font-weight: 400;
+
+    &__title {
+      font-size: 18px;
+
+      line-height: 24px;
+      letter-spacing: -0.5625px;
+
+      color: #3a4562;
+    }
+
+    &__name {
+      font-size: 16px;
+
+      letter-spacing: 0.23619px;
+
+      color: #878d9d;
+    }
+
+    &__span {
+      font-size: 35px;
+
+      color: #878d9d;
+    }
+
+    &__location {
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 17px;
+    }
+
+    &__location__icon {
+      margin-right: 8px;
+    }
+
+    &__location__address {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+
+      letter-spacing: 0.23619px;
+
+      color: #878d9d;
+    }
+  }
+
+  &__mobile__favorite {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__favorite {
+    display: flex;
+    &__icon {
+      display: none;
+    }
+
+    &__time {
+    }
+  }
+}
