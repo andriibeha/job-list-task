@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/job-list-task/static/css/main.e4260fee.css",
+    "main.js": "/job-list-task/static/js/main.22ab68da.js",
+    "static/media/5starRatingBig.svg": "/job-list-task/static/media/5starRatingBig.88da66530feeeecea70271119c2716f3.svg",
+    "index.html": "/job-list-task/index.html",
+    "static/media/Shapeicon.svg": "/job-list-task/static/media/Shapeicon.14f9ee50b9d134666b10f63dc344ff6b.svg",
+    "static/media/Arrow.svg": "/job-list-task/static/media/Arrow.81b0f26cb6486aa14408fc44c9104536.svg",
+    "static/media/Bookmark.svg": "/job-list-task/static/media/Bookmark.2aaeb9ed121c166915fe225b4885147f.svg",
+    "static/media/Location.svg": "/job-list-task/static/media/Location.1c093ca173a538132f1ce31ab6296061.svg",
+    "static/media/Bullet.svg": "/job-list-task/static/media/Bullet.b1d6c9c9c318aadd42b0a986b4227230.svg",
+    "main.e4260fee.css.map": "/job-list-task/static/css/main.e4260fee.css.map",
+    "main.22ab68da.js.map": "/job-list-task/static/js/main.22ab68da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4260fee.css",
+    "static/js/main.22ab68da.js"
+  ]
+}
