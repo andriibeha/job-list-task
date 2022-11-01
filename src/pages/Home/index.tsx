@@ -2,6 +2,7 @@ import { FC, useEffect, useCallback } from "react";
 import { useSelector } from "react-redux";
 import JobItem from "../../components/JobItem";
 import { Loader } from "../../components/Loader/indexd";
+import Pagination from "../../components/Pagination";
 import { selectJobsData } from "../../redux/selectors/selectJobsData";
 import {
   fetchJobsData,
@@ -41,6 +42,8 @@ const Home: FC = (props) => {
           ))}
         </div>
       )}
+
+      <Pagination />
     </main>
   );
 };
