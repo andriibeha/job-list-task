@@ -30,7 +30,7 @@ const JobDetailHeaad: FC<any> = ({ title, salary }) => {
               alt="shape"
               className={s.job_detail__favorite__shape__icon}
             />
-            <p className={s.job_detail__favorite__shape__text}>Shape</p>
+            <p className={s.job_detail__favorite__shape__text}>Share</p>
           </div>
         </div>
       </div>

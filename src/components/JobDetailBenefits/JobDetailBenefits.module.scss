@@ -1,4 +1,13 @@
 .job_detail {
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    letter-spacing: -0.5625px;
+
+    color: #3a4562;
+  }
   //BULLET
   &__bullet {
     margin-right: 15px;

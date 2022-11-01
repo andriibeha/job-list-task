@@ -8,6 +8,10 @@ const JobDetailBenefits: FC<Props> = ({ benefits }) => {
     <>
       <p className="title mb">Compensation & Benefits:</p>
 
+      <p className={s.job_detail__description}>
+        Our physicians enjoy a wide range of benefits, including:
+      </p>
+
       <ul>
         {benefits.map((item) => (
           <li key={item} className="flex">
